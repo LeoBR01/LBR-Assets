@@ -2,22 +2,17 @@ from django.db import models
 
 
 class Base(models.Model):
-    criado = models.DateField('Data de criação', auto_now_add=True)
-    modificar = models.DateField('Data de Atualiazação', auto_now=True)
-    ativo = models.BooleanField('Ativo?', default=True)
+    created = models.DateField('Creation Date', auto_now_add=True)
+    modify = models.DateField('Update date', auto_now=True)
+    active = models.BooleanField('Active?', default=True)
 
     class Meta:
         abstract = True
 
 
-class Stocks(Base):
-    id = models.IntegerField('id', primary_key=True)
-    nome = models.CharField('Nome', max_length=100)
+class Stock(Base):
+    name = models.CharField('Name', max_length=100)
     symbol = models.CharField('Symbol', max_length=8)
 
-    class Meta:
-        verbose_name = 'Stock'
-        verbose_name_plural = 'Stocks'
-
     def __str__(self):
-        return self.nome
+        return self.name

@@ -1,7 +1,7 @@
 from django.contrib import admin
-from .models import Stocks
+from .models import Stock
 
 
-@admin.register(Stocks)
+@admin.register(Stock)
 class StocksAdmin(admin.ModelAdmin):
-    list_display = ('id', 'nome', 'symbol', 'criado', 'modificar', 'ativo')
+    list_display = ('name', 'symbol', 'created', 'modify', 'active')
