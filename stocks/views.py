@@ -7,6 +7,6 @@ class StockInfo(TemplateView):
 
     def get_context_data(self, *args, **kwargs):
         context = {
-            'stocks': [stock_info.get_info('BIDI4')],
+            'stocks': stock_info.get_stocks_info_by_symbols(['BIDI4', 'PETR4', 'EMBR3']),
         }
         return context

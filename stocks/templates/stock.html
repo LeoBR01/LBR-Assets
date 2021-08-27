@@ -31,8 +31,9 @@
     <tbody>
     {% for stock in stocks %}
     <tr>
-        <th>{{ stock.results.BIDI4.name }}</th>
-        <td>{{ stock.results.BIDI4.symbol }}</td>
+        <th>{{ stock.name }}</th>
+        <td>{{ stock.symbol }}</td>
+        <td>{{ stock.price }}</td>
     </tr>
     {% endfor %}
     </tbody>

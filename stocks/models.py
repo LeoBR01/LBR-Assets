@@ -16,3 +16,11 @@ class Stock(Base):
 
     def __str__(self):
         return self.name
+
+
+class Price(Base):
+    value = models.IntegerField('Value')
+    min = models.IntegerField('Low Price')
+    max = models.IntegerField('Max Price')
+    stock = models.ForeignKey(
+        'stocks.Stock', verbose_name='Stock', on_delete=models.CASCADE)
