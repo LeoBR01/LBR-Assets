@@ -9,6 +9,8 @@
                 Welcome!(a) {{ user.get_full_name }}!
             </div>
             <a class="btn btn-primary" href="{% url 'logout' %}">Logout</a>
+            <a class="btn btn-primary" href="{% url 'stock' %}">Stock</a>
         {% endif %}
+        
     </div>
 {% endblock %}
