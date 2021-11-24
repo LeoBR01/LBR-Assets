@@ -27,9 +27,13 @@ def serialize_stock(stock_info, symbol):
     name = stock_info['results'][symbol]['company_name']
     price = stock_info['results'][symbol]['price']
     updated_at = stock_info['results'][symbol]['updated_at']
+    market_cap = stock_info['results'][symbol]['market_cap']
+    change_percent = stock_info['results'][symbol]['change_percent']
     return {
         'name': name,
         'price': price,
         'symbol': symbol,
-        'updated_at': updated_at
+        'updated_at': updated_at.split('-')[0],
+        'market_cap': market_cap,
+        'change_percent': change_percent,
     }

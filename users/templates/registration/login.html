@@ -1,5 +1,14 @@
-{% extends 'base.html' %}
-{% block content %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Login LBR Assets</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit-no">
+    <link rel="icon" href="https://www.geekuniversity.com.br/static/images/favicon.ico">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="https://getbootstrap.com/docs/4.0/examples/sign-in/signin.css" rel="stylesheet">
+</head>
+<body class="text-center">
     <form class="form-signin" method="post" autocomplete="off">
         {% csrf_token %}
         <img class="mb-4" src="https://www.geekuniversity.com.br/static/images/favicon.ico" alt="" width="72" height="72">
@@ -14,4 +23,8 @@
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
         <p class="mt-5 mb-3 text-muted">&copy; {% now 'Y'%}</p>
     </form>
-{% endblock %}
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+</html>
